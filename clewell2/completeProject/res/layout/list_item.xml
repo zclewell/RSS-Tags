@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Note that what follows is slightly different from lecture.  To get the TextViews to
+        fill the space up to but not into the edges, I've set their width to 0dp.  This is the
+        way to do it in the most recent version of ConstraintLayout -->
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title of the Article" />
+
+    <!-- using 'tools' instead of 'android' below provides the dummy text for use in
+            Android studio, but doesn't include it when you build the App. -->
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:text="This is where a desription of the article goes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pubDate"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/pubDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Date"
+
+        android:layout_marginLeft="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
